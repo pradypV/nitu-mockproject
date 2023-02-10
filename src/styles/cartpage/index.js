@@ -36,6 +36,8 @@ export const CartPageContainer = styled(Box)(({ theme }) => ({
   }));
 
   export const GrandTotalContainer = styled(Box)(() => ({
+    display :'flex',
+    flexDirection:'column',
     paddingTop:"3rem",
     marginBottom: "1rem",
   }));

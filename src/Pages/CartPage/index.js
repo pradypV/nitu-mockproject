@@ -73,11 +73,9 @@ console.log('cart', cart)
       </Table>
     </TableContainer>
     <GrandTotalContainer>
-    <Paper>
-    <TextContainer>Sub-total: Rs.{total_price}</TextContainer>
-    <TextContainer>Discount: Rs.{discount}</TextContainer>
-    <TextContainer>Grand Total: Rs.{total_price - discount}</TextContainer>
-    </Paper>
+    <TextContainer>Sub-total: Rs.{Number((total_price).toFixed(2))}</TextContainer>
+    <TextContainer>Discount: Rs.{Number((discount).toFixed(2))}</TextContainer>
+    <TextContainer>Grand Total: Rs.{Number((total_price - discount).toFixed(2))}</TextContainer>
     </GrandTotalContainer>
     <Button variant='contained' onClick={handleCheckout}> Check Out</Button>
     <Snackbar open={open} autoHideDuration={6000}  anchorOrigin={{vertical:'top', horizontal:'right'}} onClose={handleClose}>
