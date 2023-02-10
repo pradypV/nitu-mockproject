@@ -29,7 +29,6 @@ const handleCheckout = () => {
 const handleClose = () =>{
 setOpen(false);
 }
-console.log('cart', cart)
   return (
     <CartPageContainer>
     <CartBreadcrumbContainer>

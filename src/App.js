@@ -16,10 +16,7 @@ import { Routes, Route, BrowserRouter} from "react-router-dom";
 import React from "react";
 
 function App() {
-  // let auth = sessionStorage.getItem("userToken")
-
   const [auth, setAuth] = React.useState(sessionStorage.getItem("userToken"))
-  console.log('auth', auth)
   return (
   <ThemeProvider theme={theme}>
   <Container maxWidth='xl'>

@@ -16,7 +16,6 @@ const ProductGrid = ({pageslug}) => {
       addToCart(products[index])
     }
 
-    console.log('productData', productData)
   return (
     <Product>
     <ProductTop>Our Products 

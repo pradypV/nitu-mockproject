@@ -20,8 +20,6 @@ function SlugPage(){
   const  handleAddToCart = () => {
     addToCart(product)
   }
-  console.log('slug', slug)
-  console.log('product Detail', product)
       return(
           <ProductDetailContainer>
           <ProductDetailTitleWrapper>

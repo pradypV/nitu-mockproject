@@ -14,7 +14,6 @@ import { useProducContext } from '../../context/productContext';
 
 const AdminPage = () => {
   const { products, addNewProduct, editProduct, deleteProduct } = useProducContext();
-  console.log('usecontextProduct', products)
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [showEdit, setShowEdit] = React.useState(false);
@@ -60,7 +59,6 @@ const AdminPage = () => {
     setPage(0);
   };
 
-  console.log('dataADDEDTOProduct', state)
   return (
     <AdminPageContainer>
       <AdminBreadcrumbContainer>
