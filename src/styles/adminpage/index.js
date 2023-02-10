@@ -21,6 +21,7 @@ export const AdminPageContainer = styled(Box)(({ theme }) => ({
     flexDirection: "column",
     marginBottom: "2rem",
   }));
+  
   export const BreadcrumbTitle = styled(Typography)(() => ({
     padding: "8px",
     flexGrow: 1,
