@@ -86,7 +86,7 @@ const AdminPage = () => {
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell><Paper>
-                    <ProductImage src={row.image ? row.image : '/images/banner.png'} />
+                    <ProductImage src={row.image} />
                   </Paper></TableCell>
                   <TableCell>{row.title}</TableCell>
                   <TableCell>{row.price}</TableCell>

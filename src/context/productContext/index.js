@@ -13,25 +13,25 @@ let getLocalProductData = () => {
 }
 let initialState = {
     // products:[],
+    products: getLocalProductData(),
     loading:true,
     error:'',
-    products: getLocalProductData(),
 }
 
 
 const ProductProvider = ({children}) =>{
     const [state, dispatch] = useReducer(reducer,initialState)
-
-    useEffect(() => {
+        useEffect(() => {
         axios.get("https://fakestoreapi.com/products")
         .then((response) => {
-            dispatch({type:"FETCH_SUCCESS", payload: response.data})
+            dispatch({type:"FETCH_SUCCESS", payload: localStorage.getItem("productItems") === null ? response.data: JSON.parse(localStorage.getItem("productItems"))})
         })
         .catch((error) => {
             dispatch({type:"FETCH_ERROR"})
         })
-      }, []);
-      
+      }, [])
+   
+
       //products add
     const addNewProduct = (products) => {
         dispatch({type: "ADD_NEW_PRODUCT", payload: products});

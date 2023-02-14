@@ -72,7 +72,7 @@ setOpen(false);
       </Table>
     </TableContainer>
     <GrandTotalContainer>
-    <TextContainer>Sub-total: Rs.{Number((total_price).toFixed(2))}</TextContainer>
+    <TextContainer>Sub-total: Rs.{parseFloat(total_price).toFixed(2)}</TextContainer> 
     <TextContainer>Discount: Rs.{Number((discount).toFixed(2))}</TextContainer>
     <TextContainer>Grand Total: Rs.{Number((total_price - discount).toFixed(2))}</TextContainer>
     </GrandTotalContainer>
